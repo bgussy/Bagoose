@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: white;
+    color: black;
+}
+
+header{
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  padding: 1rem 9%;
+  background-color: black;
+  filter: drop-shadow(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color : white;
+    font-weight: 1000;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform:scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+    margin-left: 4rem;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active{
+    color: grey;
+    border-bottom: 3px solid grey;
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: white;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: orange;
+}
+
+.home-content h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 85vh;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid grey;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: 'student at Mercubuana University';
+    color: black;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid black;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "student at Mercubuana University";
+    }
+    21%, 40%{
+        content: "Tech Enthusiast";    
+    }
+    41%, 60%{
+        content: "Sports Lover";    
+    }
+    61%, 80%{
+        content: "Pop Culture Fan";    
+    }
+    81%, 100%{
+        content: "Gamer";    
+    }
+}
+
+@media (max-width:1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media (max-width:1000px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+}
+
+.home .home-content h3{
+    font-size: 2.5rem;
+}
+
+.home-content h1{
+    font-size: 5%rem;
+}
+
+.home-img img{
+    width: 70vh;
+    margin-top: 4rem;
+
+}
+
+.about {
+  padding: 50px 20px;
+}
+
+.about {
+  min-height: 100vh;              
+  display: flex;
+  justify-content: center;      
+  align-items: center;          
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+.about {
+  padding: 100px 20px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  gap: 40px; 
+  flex-wrap: wrap;
+  text-align: center; 
+}
+
+.about-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+
+.about-text h1 {
+  margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 5rem;
+}
+
+.about-text h2 {
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
+
+
+.projects {
+  padding: 100px 20px 50px;
+  text-align: center;
+}
+
+.projects h1 {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items in first row */
+  grid-gap: 20px;
+  justify-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.projects-container .project-card:nth-child(4),
+.projects-container .project-card:nth-child(5) {
+  grid-column: span 1;
+}
+
+.projects-container .project-card:nth-child(4) {
+  grid-column: 2; 
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  background: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
+
+.project-card {
+  background: #f4f4f4;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 200px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.3s; }
+.project-card:nth-child(3) { animation-delay: 0.5s; }
+.project-card:nth-child(4) { animation-delay: 0.7s; }
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  background: #ffffff;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in.delay-1 { animation-delay: 0.2s; }
+.fade-in.delay-2 { animation-delay: 0.4s; }
+.fade-in.delay-3 { animation-delay: 0.6s; }
+
+.contact {
+  padding: 120px 20px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.contact-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.contact-container h1 {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.contact-container p {
+  margin-bottom: 30px;
+  color: #555;
+  font-weight: 500;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* jarak ikon dan teks */
+  padding: 15px;
+  border-radius: 8px;
+  background: #f4f4f4;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-links a i {
+  font-size: 18px;
+}
+
+.contact-links a:hover {
+  transform: translateY(-4px);
+  background: #ffffff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+
+@media (max-width: 995px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background: black;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border: 1px solid white;
+  }
+
+  nav a {
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+    display: block;
+  }
+
+  nav.active {
+    display: flex;
+  }
+}
